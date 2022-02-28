@@ -4,6 +4,7 @@ class Film{
     private $regista;
     private $genere;
     private $anno;
+    private $attori =[];
 
 
     public function __construct($_titolo,$_regista,$_genere,$_anno){

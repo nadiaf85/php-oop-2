@@ -11,7 +11,7 @@ proiezione (es: una sala potrebbe avere vibrazione, fumo, acqua, un’altra solo
 
 require_once __DIR__.'/classes/Film.php';
 require_once __DIR__.'/classes/Sala.php';
-// require_once __DIR__.'/classes/Sala_immersiva.php';
+require_once __DIR__.'/classes/Sala_immersiva.php';
 require_once __DIR__.'/classes/Spettacolo.php';
 
 
@@ -27,7 +27,7 @@ $sale = [
     new Sala (100,3,"Sala blu"),
     new Sala (100,7,"Sala rossa"),
     new Sala (100,1,"Sala gialla"),
-    new Sala (100,5,"Sala verde"),
+    new SalaImmersiva(100,5,"Sala verde",["fumo","acqua"]),
     new Sala (100,8,"Sala azzurra"),
 ];
 
@@ -54,7 +54,7 @@ var_dump($film,$sale,$spettacoli);
 </head>
 <body>
 
-    <!-- <ul>
+    < !-- <ul>
         <?php
 
             foreach ($film as $elemento){
@@ -62,8 +62,8 @@ var_dump($film,$sale,$spettacoli);
         }
 
         ?>
-    </ul> -->
-    
+    </ul> -- >
+
 </body>
 </html> -->
 
