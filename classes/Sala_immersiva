@@ -1,0 +1,7 @@
+<?php 
+class Sala_immersiva{
+    public $numero_posti;
+    public $numero_sala;
+    public $effetti_speciali;
+}
+?>
