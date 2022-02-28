@@ -10,10 +10,9 @@ proiezione (es: una sala potrebbe avere vibrazione, fumo, acqua, un’altra solo
 <?php
 
 require_once __DIR__.'/classes/Film.php';
-// require_once __DIR__.'/classes/Sala.php';
+require_once __DIR__.'/classes/Sala.php';
 // require_once __DIR__.'/classes/Sala_immersiva.php';
-// require_once __DIR__.'/classes/Attori.php';
-// require_once __DIR__.'/classes/Spettacoli.php';
+require_once __DIR__.'/classes/Spettacolo.php';
 
 
 $film = [
@@ -24,19 +23,28 @@ $film = [
     new Film ("Matrix","Andy e Larry Wachowski","Fantascienza","1999"),
 ];
 
-// $sale = [
-//     new Sala (100,3,"Sala blu"),
-//     new Sala (100,7,"Sala rossa"),
-//     new Sala (100,1,"Sala gialla"),
-//     new Sala (100,5,"Sala verde"),
-//     new Sala (100,8,"Sala azzurra"),
-// ];
+$sale = [
+    new Sala (100,3,"Sala blu"),
+    new Sala (100,7,"Sala rossa"),
+    new Sala (100,1,"Sala gialla"),
+    new Sala (100,5,"Sala verde"),
+    new Sala (100,8,"Sala azzurra"),
+];
 
+$spettacoli = [
+    new Spettacolo ($film[4],"01/03/2022","15:00",$sale[0]),
+    new Spettacolo ($film[2],"07/03/2022","19:30",$sale[3]),
+    new Spettacolo ($film[0],"03/03/2022","21:45",$sale[4]),
+    new Spettacolo ($film[1],"09/03/2022","22:00",$sale[1]),
+    new Spettacolo ($film[3],"05/03/2022","18:30",$sale[2]),
+];
+
+var_dump($film,$sale,$spettacoli);
 
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,7 +54,7 @@ $film = [
 </head>
 <body>
 
-    <ul>
+    <!-- <ul>
         <?php
 
             foreach ($film as $elemento){
@@ -54,10 +62,10 @@ $film = [
         }
 
         ?>
-    </ul>
+    </ul> -->
     
 </body>
-</html>
+</html> -->
 
 
 

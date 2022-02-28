@@ -1,8 +1,8 @@
 <?php 
 class Sala{
-    protected $num_posti;
-    protected $num_sala;
-    protected $nome;
+    private $num_posti;
+    private $num_sala;
+    private $nome;
 
     public function __construct($_num_posti,$_num_sala,$_nome){
         $this->num_posti = $_num_posti;
@@ -11,9 +11,9 @@ class Sala{
 
     }
 
-    public function getInfoSala(){
-        return "{$this->num_posti} {$this->num_sala} {$this->nome}";
-    }
+    // public function getInfoSala(){
+    //     return "{$this->num_posti} {$this->num_sala} {$this->nome}";
+    // }
 }
-}
+
 ?>
