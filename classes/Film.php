@@ -14,9 +14,9 @@ class Film{
         $this->anno = $_anno;
     }
 
-    public function getInfo(){
-        return "{$this->titolo}<br> {$this->regista}<br> {$this->genere}<br> [{$this->anno}]";
-    }
+    // public function getInfo(){
+    //     return "{$this->titolo}<br> {$this->regista}<br> {$this->genere}<br> [{$this->anno}]";
+    // }
 }
 
 ?>

@@ -9,9 +9,13 @@ proiezione (es: una sala potrebbe avere vibrazione, fumo, acqua, un’altra solo
 
 <?php
 
+// error_reporting(E_ALL);
+//     ini_set('display_errors', TRUE);
+//     ini_set('display_startup_errors', TRUE);
+
 require_once __DIR__.'/classes/Film.php';
 require_once __DIR__.'/classes/Sala.php';
-require_once __DIR__.'/classes/Sala_immersiva.php';
+require_once __DIR__.'/classes/SalaImmersiva.php';
 require_once __DIR__.'/classes/Spettacolo.php';
 
 

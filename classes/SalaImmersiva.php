@@ -1,4 +1,5 @@
 <?php 
+
 class SalaImmersiva extends Sala{
     private $effetti_speciali = [];
 
