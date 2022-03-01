@@ -1,10 +1,10 @@
 <?php 
 class Film{
-    private $titolo;
+    public $titolo;
     private $regista;
     private $genere;
     private $anno;
-    private $durata;
+    public $durata;
     private $attori;
 
 

@@ -6,7 +6,7 @@ class Spettacolo{
     private $sala;
     private $film;
 
-    public function __construct($_data,$_orario,$_sala,$_film){
+    public function __construct($_film,$_data,$_orario,$_sala){
         $this->data = $_data;
         $this->orario = $_orario;
         $this->sala = $_sala;

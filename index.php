@@ -66,7 +66,7 @@ $spettacoli = [
     new Spettacolo($film[4],"2022-03-01","15:00",$sale[0]),
     new Spettacolo($film[2],"2022-03-07","19:30",$sale[3]),
     new Spettacolo($film[0],"2022-03-03","21:45",$sale[4]),
-    new Spettacolo($film[1],"2022-03-09","22:00",$sale[2]),
+    new Spettacolo($film[3],"2022-03-05","22:00",$sale[4]),
     new Spettacolo($film[1],"2022-03-09","18:00",$sale[1]),
     new Spettacolo($film[1],"2022-03-09","16:30",$sale[0]),
     new Spettacolo($film[1],"2022-03-09","17:45",$sale[3]),
@@ -74,10 +74,10 @@ $spettacoli = [
 ];
 
 
-var_dump($spettacoli);
+// var_dump($spettacoli);
 
 // 1) Recupera l’elenco delle sale con relative informazioni
-var_dump($sale);
+// var_dump($sale);
 
 // 2) Recuperare la capienza totale del cinema considerando tutte le sale a 
 // disposizione.
@@ -86,23 +86,39 @@ var_dump($sale);
         $capienza += $elemento->getCapienzaSala();
     }
 
-    var_dump($capienza);
+    // var_dump($capienza);
 
 // 3) Stabilito un giorno e un film, recuperare quante proiezioni totali
 // di quel film ci saranno.
 
-    $giornoScelto = "2022-03-09";
-    $filmScelto = $film[3];
+    $giornoScelto = "2022-03-05";
+    $filmScelto = $film[3]->titolo;
+    $contatore=0;
 
     foreach($spettacoli as $elemento){
-        if(($elemento->getData() == $giornoScelto) && ($elemento->getFilm() == $filmScelto)){
+        if(($elemento->getData() == $giornoScelto) && ($elemento->getFilm()->titolo == $filmScelto)){
             $contatore++;
         } 
     }
 
-    var_dump($contatore);
+    // var_dump($contatore);
 
 // 4) Stabilito un giorno, recupera l’orario di fine dell’ultimo spettacolo.
+
+$indiceUltimoSpettacolo=null;
+
+foreach($spettacoli as $indice=>$elemento){
+    $inizio="";
+    if(($elemento->getData() == $giornoScelto) && $elemento->getOrario()> $inizio ){
+        $inizio=$elemento->getOrario();
+        $indiceUltimoSpettacolo= $indice;
+    } 
+}
+
+if (!is_null($indiceUltimoSpettacolo)){
+    echo $spettacoli[$indiceUltimoSpettacolo]->getOrario()." + ".$spettacoli[$indiceUltimoSpettacolo]->getFilm()->durata;
+}
+    
 ?>
 
 
