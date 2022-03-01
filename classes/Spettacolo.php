@@ -12,5 +12,17 @@ class Spettacolo{
         $this->sala = $_sala;
         $this->film = $_film;
     }
+
+    public function getData(){
+       return $this->data;
+    }
+
+    public function getFilm(){
+       return $this->film;
+    }
+
+    public function getOrario(){
+       return $this->orario;
+    }
 }
 ?>

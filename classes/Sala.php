@@ -11,9 +11,13 @@ class Sala{
 
     }
 
-    // public function getInfoSala(){
-    //     return "{$this->num_posti} {$this->num_sala} {$this->nome}";
-    // }
+    public function getInfoSala(){
+        return "{$this->num_posti} {$this->num_sala} {$this->nome}";
+    }
+
+    public function getCapienzaSala(){
+        return $this->num_posti;
+    }
 }
 
 ?>
